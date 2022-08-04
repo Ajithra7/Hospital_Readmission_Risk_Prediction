@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Diabetes Readmission prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+    <!-- <img src="{{url_for('static', filename='hospdischargeadmit.jpg')}}" align="middle" /> -->
+  <nav class="Blue" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Hospital Readmission Predictor</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">HOME</a></li>
+      </ul>
+
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+     <h5 style="text-align: center; color: brown; font-weight: 600;">{{pred}}</h5>
+      <h1 class="header centre #FF4500">Hospital Readmission Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s17 light">Check whether a person with following medical details have chance of readmission or not.
+        <br>
+        </h5>
+      </div>
+
+
+    <div class="row">
+        <form action='/predict' method="post" class="col s12">
+            <div class="row">
+            <div class="input-field col s4">
+                <label for="last_name"><b>gender</b></label>
+                <br>
+                <input id="last_name" name="1" placeholder="eg: 0,1"  type="text" class="validate">
+
+            </div>
+            <div class="input-field col s4">
+                <label for="last_name"><b>age</b></label>
+                <br>
+                <input id="last_name" name="2" placeholder="eg: 0,1"  type="text" class="validate">
+
+            </div>
+            <div class="input-field col s4">
+                <label for="last_name"><b>admission_type_id</b></label>
+                <br>
+                <input id="last_name" name="3" placeholder="eg: 0,1"  type="text" class="validate">
+
+            </div>
+                <div class="input-field col s4">
+                    <label for="first_name"><b>discharge_disposition_id</b></label>
+                    <br>
+                    <input placeholder="eg: 35,55,85" name="4" id="first_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>admission_source_id</b></label>
+                    <br>
+                    <input id="last_name" name="5" placeholder="eg: 0,1"  type="text" class="validate">
+    
+                </div>
+    
+                <div class="input-field col s4">
+                    <label for="_name"><b>time_in_hospital</b></label>
+                    <br>
+                    <input id="_name" name="6" placeholder="eg: 0,1" type="text" class="validate">
+    
+                </div>
+                <div class="input-field col s4">
+                    <label for="first_name"><b>num_medications</b></label>
+                    <br>
+                    <input placeholder="eg: 0,1" name="7" id="first_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>number_diagnoses</b></label>
+                    <br>
+                    <input id="last_name" name="8" placeholder="eg: 0,1"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>metformin</b></label>
+                    <br>
+                    <input id="last_name" name="9" placeholder="eg: 0,1"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>glipizide</b></label>
+                    <br>
+                    <input id="last_name" name="10" placeholder="eg: 0,1"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>glyburide</b></label>
+                    <br>
+                    <input id="last_name" name="11" placeholder="eg: 0,1"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>insulin</b></label>
+                    <br>
+                    <input id="last_name" name="12" placeholder="eg: 0,1"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                  <label for="last_name"><b>change</b></label>
+                  <br>
+                  <input id="last_name" name="13" placeholder="eg: 0,1"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>diabetesMed</b></label>
+                    <br>
+                    <input id="last_name" name="14" placeholder="eg: 0,1"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>service_utilization</b></label>
+                    <br>
+                    <input id="last_name" name="15" placeholder="eg: 0,1"  type="text" class="validate">
+                </div>
+                
+    
+          </div>
+    
+          <div class="row center">
+    
+              <button type="submit" class="btn-large waves-effect waves-light blue">Submit</button>
+
+          </div>
+        </form>
+  </div>
+
+      <br>
+
+     
+    <br><br>
+  </div>
+  </div>>
+
+  
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
